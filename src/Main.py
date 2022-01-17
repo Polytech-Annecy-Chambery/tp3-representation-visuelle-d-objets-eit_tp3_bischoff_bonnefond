@@ -16,7 +16,7 @@ import copy
 
 
 def Q1a():
-    pass
+    return Configuration()
     
 def Q1b_f():
     return Configuration({'screenPosition': -5, 'xAxisColor': [1, 1, 0]}). \
@@ -37,14 +37,14 @@ def Q2c():
             )
 
 def Q3a():
-    pass  
+    return Configuration().add(Wall(({'position': [1, 1, 0], 'width':7, 'height':2.6,'orientation':90, 'edges': True})))
 
 def Q4a():
     # Ecriture en utilisant des variables : A compléter
-    wall1 = Wall(...)
-    wall2 = Wall(...)
-    wall3 = Wall(...)
-    wall4 = Wall(...)  
+    wall1 = Wall({'position': [0, 0, 0], 'width':7, 'height':2.6,'orientation':0, 'edges': True})
+    wall2 = Wall({'position': [0, 6.8, 0], 'width':7, 'height':2.6,'orientation':0, 'edges': True})
+    wall3 = Wall({'position': [0, 0, 0], 'width':7, 'height':2.6,'orientation':90, 'edges': True})
+    wall4 = Wall({'position': [0, -7, 0], 'width':7, 'height':2.6,'orientation':90, 'edges': True})  
     house = House({'position': [-3, 1, 0], 'orientation':0})
     house.add(wall1).add(wall3).add(wall4).add(wall2)
     return Configuration().add(house)   
@@ -106,7 +106,7 @@ def main():
     # configuration = Q5c2() 
     # configuration = Q5d()
     # configuration = Q6()
-    configuration.display()     
+    # configuration.display()     
          
 # Calls the main function
 if __name__ == "__main__":
